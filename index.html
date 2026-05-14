@@ -10,8 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
-  <!-- ===== GOOGLE ANALYTICS 4 ===== -->
-  <!-- Daftar gratis di https://analytics.google.com lalu ganti G-XXXXXXXXXX dengan ID Anda -->
+  <!-- ===== GOOGLE ANALYTICS 4 — ID ASLI ===== -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-26ZYNBZQ97"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -133,7 +132,7 @@
       pointer-events: none;
     }
 
-    /* ===== TAMBAHAN: Counter animation ===== */
+    /* Counter animation */
     @keyframes countPulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.05); }
@@ -148,11 +147,9 @@
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style="background:transparent;">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <div class="flex items-center justify-between h-20 md:h-24">
-        <!-- Logo -->
         <a href="#beranda" class="nav-logo font-serif text-2xl md:text-3xl font-bold text-white transition-colors duration-300">
           Pak Basiyo
         </a>
-        <!-- Desktop Nav -->
         <div class="hidden lg:flex items-center gap-1">
           <a href="#beranda" class="nav-link text-white/90 hover:text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Beranda</a>
           <a href="#tentang" class="nav-link text-white/90 hover:text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Tentang</a>
@@ -161,7 +158,6 @@
           <a href="#galeri" class="nav-link text-white/90 hover:text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Galeri</a>
           <a href="#lokasi" class="nav-link text-white/90 hover:text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Lokasi</a>
         </div>
-        <!-- CTA + Hamburger -->
         <div class="flex items-center gap-3">
           <a href="#lokasi" class="nav-cta hidden md:inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm font-semibold px-6 py-2.5 rounded-full border border-white/25 hover:bg-white hover:text-brand-600 transition-all duration-300">
             <span class="iconify" data-icon="mdi:whatsapp" data-width="18"></span>
@@ -199,18 +195,14 @@
 
   <!-- ===== HERO SECTION ===== -->
   <section id="beranda" class="relative min-h-screen flex items-center overflow-hidden">
-    <!-- Background Gradient -->
     <div class="absolute inset-0 bg-gradient-to-br from-brand-600 via-brand-500 to-amber-500"></div>
-    <!-- Decorative Elements -->
     <div class="decorative-circle w-[500px] h-[500px] -top-32 -right-32 bg-white/5 top-0 right-0"></div>
     <div class="decorative-circle w-[300px] h-[300px] bottom-20 -left-20 bg-white/5"></div>
     <div class="decorative-circle w-[200px] h-[200px] top-1/3 right-1/4 bg-white/[0.03]"></div>
-    <!-- Subtle Pattern Overlay -->
     <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 30px 30px;"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full pt-28 pb-16 md:pt-32 md:pb-24">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-        <!-- Left: Text -->
         <div class="text-center lg:text-left">
           <div class="reveal inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full border border-white/15 mb-6">
             <span class="w-2 h-2 bg-amber-300 rounded-full animate-pulse"></span>
@@ -236,26 +228,18 @@
           </div>
         </div>
 
-        <!-- Right: Hero Images -->
         <div class="relative flex justify-center lg:justify-end">
-          <!-- Main Image -->
           <div class="reveal reveal-delay-3 relative">
             <div class="hero-img-float relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[420px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/20">
               <img src="https://picsum.photos/seed/bakso-kuah-hero/640/840" alt="Bakso Kuah" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
             </div>
-
-            <!-- Small Image 1 -->
             <div class="hero-img-float-delay absolute -bottom-6 -left-8 sm:-left-12 w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden shadow-xl border-4 border-white/20 z-10">
               <img src="https://picsum.photos/seed/mie-ayam-hero/440/440" alt="Mie Ayam" class="w-full h-full object-cover">
             </div>
-
-            <!-- Small Image 2 -->
             <div class="hero-img-float-delay2 absolute -top-4 -right-6 sm:-right-10 w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-xl border-4 border-white/20 z-10">
               <img src="https://picsum.photos/seed/pangsit-goreng-hero/400/400" alt="Pangsit Goreng" class="w-full h-full object-cover">
             </div>
-
-            <!-- Badge -->
             <div class="absolute -bottom-4 right-4 sm:right-8 bg-white rounded-2xl shadow-xl px-4 py-3 z-20 flex items-center gap-3">
               <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
                 <span class="iconify text-brand-500" data-icon="mdi:fire" data-width="22"></span>
@@ -269,7 +253,7 @@
         </div>
       </div>
 
-      <!-- ===== TAMBAHAN: Live Visitor Badge ===== -->
+      <!-- Live Visitor Badge -->
       <div class="reveal reveal-delay-5 flex justify-center mt-12 lg:mt-8">
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/15">
           <span class="relative flex h-2.5 w-2.5">
@@ -282,7 +266,6 @@
         </div>
       </div>
 
-      <!-- Scroll Indicator -->
       <div class="hidden md:flex justify-center mt-6">
         <a href="#tentang" class="flex flex-col items-center gap-2 text-white/60 hover:text-white/90 transition-colors">
           <span class="text-xs tracking-widest uppercase">Scroll</span>
@@ -298,7 +281,6 @@
   <section id="tentang" class="relative py-24 md:py-32 bg-warm-50">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-        <!-- Image Side -->
         <div class="reveal relative order-2 lg:order-1">
           <div class="relative">
             <div class="rounded-3xl overflow-hidden shadow-2xl">
@@ -311,39 +293,16 @@
             </div>
           </div>
         </div>
-
-        <!-- Text Side -->
         <div class="order-1 lg:order-2">
-          <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5">
-            Tentang Kami
-          </div>
-          <h2 class="reveal reveal-delay-1 font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-6">
-            Warung dengan Cita Rasa<br>
-            <span class="text-brand-500">Legendaris</span>
-          </h2>
+          <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5">Tentang Kami</div>
+          <h2 class="reveal reveal-delay-1 font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-6">Warung dengan Cita Rasa<br><span class="text-brand-500">Legendaris</span></h2>
           <div class="reveal reveal-delay-2 w-16 h-1 bg-brand-400 rounded-full mb-6"></div>
-          <p class="reveal reveal-delay-3 text-stone-600 text-lg leading-relaxed mb-6">
-            Bakso Mie Ayam Pak Basiyo Gunungkidul menghadirkan sajian bakso dan mie ayam dengan cita rasa khas yang diracik dari bahan pilihan. Dengan resep yang terjaga kualitasnya, kami berkomitmen memberikan pengalaman kuliner yang hangat dan berkesan bagi setiap pelanggan.
-          </p>
-          <p class="reveal reveal-delay-4 text-stone-500 leading-relaxed mb-8">
-            Berawal dari dapur sederhana di Gunungkidul, kini Pak Basiyo telah menjadi destinasi kuliner yang tak boleh dilewatkan. Setiap mangkuk yang kami sajikan membawa cerita, dedikasi, dan cinta terhadap cita rasa Indonesia yang autentik.
-          </p>
+          <p class="reveal reveal-delay-3 text-stone-600 text-lg leading-relaxed mb-6">Bakso Mie Ayam Pak Basiyo Gunungkidul menghadirkan sajian bakso dan mie ayam dengan cita rasa khas yang diracik dari bahan pilihan. Dengan resep yang terjaga kualitasnya, kami berkomitmen memberikan pengalaman kuliner yang hangat dan berkesan bagi setiap pelanggan.</p>
+          <p class="reveal reveal-delay-4 text-stone-500 leading-relaxed mb-8">Berawal dari dapur sederhana di Gunungkidul, kini Pak Basiyo telah menjadi destinasi kuliner yang tak boleh dilewatkan. Setiap mangkuk yang kami sajikan membawa cerita, dedikasi, dan cinta terhadap cita rasa Indonesia yang autentik.</p>
           <div class="reveal reveal-delay-5 flex flex-wrap gap-8">
-            <div>
-              <div class="font-serif text-3xl font-bold text-brand-500">100%</div>
-              <div class="text-sm text-stone-500">Bahan Berkualitas</div>
-            </div>
-            <div>
-              <div class="font-serif text-3xl font-bold text-brand-500">5K+</div>
-              <div class="text-sm text-stone-500">Pelanggan Bulanan</div>
-            </div>
-            <div>
-              <div class="font-serif text-3xl font-bold text-brand-500">4.8</div>
-              <div class="text-sm text-stone-500 flex items-center gap-1">
-                Rating
-                <span class="iconify text-amber-400" data-icon="mdi:star" data-width="14"></span>
-              </div>
-            </div>
+            <div><div class="font-serif text-3xl font-bold text-brand-500">100%</div><div class="text-sm text-stone-500">Bahan Berkualitas</div></div>
+            <div><div class="font-serif text-3xl font-bold text-brand-500">5K+</div><div class="text-sm text-stone-500">Pelanggan Bulanan</div></div>
+            <div><div class="font-serif text-3xl font-bold text-brand-500">4.8</div><div class="text-sm text-stone-500 flex items-center gap-1">Rating <span class="iconify text-amber-400" data-icon="mdi:star" data-width="14"></span></div></div>
           </div>
         </div>
       </div>
@@ -354,110 +313,47 @@
   <section id="menu" class="py-24 md:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5">
-          Menu Pilihan
-        </div>
-        <h2 class="reveal reveal-delay-1 font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-stone-900 tracking-tight mb-4">
-          Menu <span class="text-brand-500">Unggulan</span>
-        </h2>
+        <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5">Menu Pilihan</div>
+        <h2 class="reveal reveal-delay-1 font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-stone-900 tracking-tight mb-4">Menu <span class="text-brand-500">Unggulan</span></h2>
         <div class="reveal reveal-delay-2 w-16 h-1 bg-brand-400 rounded-full mx-auto mb-6"></div>
-        <p class="reveal reveal-delay-3 text-stone-500 text-lg">
-          Sajian terbaik yang siap menggugah selera dan menghangatkan hati Anda
-        </p>
+        <p class="reveal reveal-delay-3 text-stone-500 text-lg">Sajian terbaik yang siap menggugah selera dan menghangatkan hati Anda</p>
       </div>
-
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <div class="reveal menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/bakso-original-bowl/600/400" alt="Bakso Original" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-brand-600 text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-full">Favorit</div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Bakso Original</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Bakso kenyal dengan kuah kaldu sapi yang gurih dan hangat, sajian klasik yang tak pernah gagal memuaskan.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/bakso-original-bowl/600/400" alt="Bakso Original" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div><div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-brand-600 text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-full">Favorit</div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Bakso Original</h3><p class="text-stone-500 text-sm leading-relaxed">Bakso kenyal dengan kuah kaldu sapi yang gurih dan hangat, sajian klasik yang tak pernah gagal memuaskan.</p></div>
         </div>
         <div class="reveal reveal-delay-1 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/bakso-urat-daging/600/400" alt="Bakso Urat" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Bakso Urat</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Kelezatan bakso dengan serat daging yang kenyal, memberikan sensasi gigitan yang memuaskan di setiap suapan.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/bakso-urat-daging/600/400" alt="Bakso Urat" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Bakso Urat</h3><p class="text-stone-500 text-sm leading-relaxed">Kelezatan bakso dengan serat daging yang kenyal, memberikan sensasi gigitan yang memuaskan di setiap suapan.</p></div>
         </div>
         <div class="reveal reveal-delay-2 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/bakso-telur-puyuh/600/400" alt="Bakso Telur" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Bakso Telur</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Bakso berisi telur puyuh utuh, paduan kelezatan yang mengejutkan dalam setiap gigitan.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/bakso-telur-puyuh/600/400" alt="Bakso Telur" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Bakso Telur</h3><p class="text-stone-500 text-sm leading-relaxed">Bakso berisi telur puyuh utuh, paduan kelezatan yang mengejutkan dalam setiap gigitan.</p></div>
         </div>
         <div class="reveal menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/mie-ayam-classic/600/400" alt="Mie Ayam Original" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-brand-600 text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-full">Best Seller</div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Mie Ayam Original</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Mie kenyal disiram kuah ayam gurih dengan topping ayam cincang bumbu kecap yang menggugah selera.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/mie-ayam-classic/600/400" alt="Mie Ayam Original" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div><div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-brand-600 text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-full">Best Seller</div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Mie Ayam Original</h3><p class="text-stone-500 text-sm leading-relaxed">Mie kenyal disiram kuah ayam gurih dengan topping ayam cincang bumbu kecap yang menggugah selera.</p></div>
         </div>
         <div class="reveal reveal-delay-1 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/mie-ayam-bakso-combo/600/400" alt="Mie Ayam Bakso" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Mie Ayam Bakso</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Kombinasi sempurna mie ayam dengan bakso kenyal, satu mangkuk penuh kenikmatan ganda.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/mie-ayam-bakso-combo/600/400" alt="Mie Ayam Bakso" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Mie Ayam Bakso</h3><p class="text-stone-500 text-sm leading-relaxed">Kombinasi sempurna mie ayam dengan bakso kenyal, satu mangkuk penuh kenikmatan ganda.</p></div>
         </div>
         <div class="reveal reveal-delay-2 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/mie-ayam-ceker/600/400" alt="Mie Ayam Ceker" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Mie Ayam Ceker</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Mie ayam spesial dengan ceker ayam empuk yang meresap bumbu, kelezatan yang bikin nagih.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/mie-ayam-ceker/600/400" alt="Mie Ayam Ceker" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Mie Ayam Ceker</h3><p class="text-stone-500 text-sm leading-relaxed">Mie ayam spesial dengan ceker ayam empuk yang meresap bumbu, kelezatan yang bikin nagih.</p></div>
         </div>
         <div class="reveal menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/pangsit-goreng-crispy/600/400" alt="Pangsit Goreng" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Pangsit Goreng</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Pangsit renyah berisi daging ayam, teman sempurna untuk menemani mangkuk bakso atau mie ayam Anda.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/pangsit-goreng-crispy/600/400" alt="Pangsit Goreng" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Pangsit Goreng</h3><p class="text-stone-500 text-sm leading-relaxed">Pangsit renyah berisi daging ayam, teman sempurna untuk menemani mangkuk bakso atau mie ayam Anda.</p></div>
         </div>
         <div class="reveal reveal-delay-1 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/es-teh-manis-dingin/600/400" alt="Es Teh" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Es Teh</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Teh manis segar dingin, pelepas dahaga yang sempurna menemani sajian hangat Anda.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/es-teh-manis-dingin/600/400" alt="Es Teh" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Es Teh</h3><p class="text-stone-500 text-sm leading-relaxed">Teh manis segar dingin, pelepas dahaga yang sempurna menemani sajian hangat Anda.</p></div>
         </div>
         <div class="reveal reveal-delay-2 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://picsum.photos/seed/es-jeruk-segar/600/400" alt="Es Jeruk" class="menu-img w-full h-full object-cover transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Es Jeruk</h3>
-            <p class="text-stone-500 text-sm leading-relaxed">Jeruk peras segar dengan sentuhan manis, penyegar alami yang melengkapi kelezatan setiap hidangan.</p>
-          </div>
+          <div class="relative h-56 overflow-hidden"><img src="https://picsum.photos/seed/es-jeruk-segar/600/400" alt="Es Jeruk" class="menu-img w-full h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div></div>
+          <div class="p-6"><h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Es Jeruk</h3><p class="text-stone-500 text-sm leading-relaxed">Jeruk peras segar dengan sentuhan manis, penyegar alami yang melengkapi kelezatan setiap hidangan.</p></div>
         </div>
       </div>
     </div>
@@ -476,31 +372,11 @@
         <p class="reveal reveal-delay-3 text-stone-400 text-lg">Kami berkomitmen menghadirkan yang terbaik dalam setiap aspek</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-        <div class="reveal group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500">
-          <div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:leaf" data-width="28"></span></div>
-          <h3 class="font-serif text-lg font-semibold text-white mb-2">Bahan Segar Berkualitas</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">Bahan pilihan terbaik yang selalu segar setiap hari</p>
-        </div>
-        <div class="reveal reveal-delay-1 group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500">
-          <div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:book-open-variant" data-width="28"></span></div>
-          <h3 class="font-serif text-lg font-semibold text-white mb-2">Resep Khas & Konsisten</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">Rahasia resep turun-temurun yang konsisten rasanya</p>
-        </div>
-        <div class="reveal reveal-delay-2 group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500">
-          <div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:pot-steam" data-width="28"></span></div>
-          <h3 class="font-serif text-lg font-semibold text-white mb-2">Porsi Mengenyangkan</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">Porsi besar yang pasti membuat perut kenyang dan puas</p>
-        </div>
-        <div class="reveal reveal-delay-3 group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500">
-          <div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:home-heart" data-width="28"></span></div>
-          <h3 class="font-serif text-lg font-semibold text-white mb-2">Tempat Nyaman</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">Suasana bersih dan nyaman untuk menikmati hidangan</p>
-        </div>
-        <div class="reveal reveal-delay-4 group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500">
-          <div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:hand-heart" data-width="28"></span></div>
-          <h3 class="font-serif text-lg font-semibold text-white mb-2">Pelayanan Ramah</h3>
-          <p class="text-stone-400 text-sm leading-relaxed">Pelayanan hangat dan ramah seperti keluarga sendiri</p>
-        </div>
+        <div class="reveal group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500"><div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:leaf" data-width="28"></span></div><h3 class="font-serif text-lg font-semibold text-white mb-2">Bahan Segar Berkualitas</h3><p class="text-stone-400 text-sm leading-relaxed">Bahan pilihan terbaik yang selalu segar setiap hari</p></div>
+        <div class="reveal reveal-delay-1 group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500"><div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:book-open-variant" data-width="28"></span></div><h3 class="font-serif text-lg font-semibold text-white mb-2">Resep Khas & Konsisten</h3><p class="text-stone-400 text-sm leading-relaxed">Rahasia resep turun-temurun yang konsisten rasanya</p></div>
+        <div class="reveal reveal-delay-2 group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500"><div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:pot-steam" data-width="28"></span></div><h3 class="font-serif text-lg font-semibold text-white mb-2">Porsi Mengenyangkan</h3><p class="text-stone-400 text-sm leading-relaxed">Porsi besar yang pasti membuat perut kenyang dan puas</p></div>
+        <div class="reveal reveal-delay-3 group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500"><div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:home-heart" data-width="28"></span></div><h3 class="font-serif text-lg font-semibold text-white mb-2">Tempat Nyaman</h3><p class="text-stone-400 text-sm leading-relaxed">Suasana bersih dan nyaman untuk menikmati hidangan</p></div>
+        <div class="reveal reveal-delay-4 group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500"><div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:hand-heart" data-width="28"></span></div><h3 class="font-serif text-lg font-semibold text-white mb-2">Pelayanan Ramah</h3><p class="text-stone-400 text-sm leading-relaxed">Pelayanan hangat dan ramah seperti keluarga sendiri</p></div>
       </div>
     </div>
   </section>
@@ -515,46 +391,14 @@
         <p class="reveal reveal-delay-3 text-stone-500 text-lg">Intip kelezatan dan kenyamanan yang menanti Anda</p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-        <div class="reveal gallery-item col-span-2 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
-          <img src="https://picsum.photos/seed/bakso-bowl-steam/800/800" alt="Bakso Kuah Hangat" class="gallery-img w-full h-64 md:h-full object-cover transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500"><div class="font-serif text-lg font-semibold">Bakso Kuah Hangat</div></div>
-        </div>
-        <div class="reveal reveal-delay-1 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
-          <img src="https://picsum.photos/seed/mie-ayam-plate/400/400" alt="Mie Ayam Spesial" class="gallery-img w-full h-36 md:h-48 object-cover transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Mie Ayam Spesial</div></div>
-        </div>
-        <div class="reveal reveal-delay-2 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
-          <img src="https://picsum.photos/seed/pangsit-piring/400/400" alt="Pangsit Goreng" class="gallery-img w-full h-36 md:h-48 object-cover transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Pangsit Goreng</div></div>
-        </div>
-        <div class="reveal reveal-delay-3 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
-          <img src="https://picsum.photos/seed/dapur-masak/400/400" alt="Proses Memasak" class="gallery-img w-full h-36 md:h-48 object-cover transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Proses Memasak</div></div>
-        </div>
-        <div class="reveal reveal-delay-4 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
-          <img src="https://picsum.photos/seed/warung-interior/400/400" alt="Suasana Warung" class="gallery-img w-full h-36 md:h-48 object-cover transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Suasana Warung</div></div>
-        </div>
-        <div class="reveal gallery-item col-span-2 rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
-          <img src="https://picsum.photos/seed/makan-bersama/800/400" alt="Makan Bersama" class="gallery-img w-full h-40 md:h-56 object-cover transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-lg font-semibold">Makan Bersama Keluarga</div></div>
-        </div>
-        <div class="reveal reveal-delay-1 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
-          <img src="https://picsum.photos/seed/bumbu-dapur/400/400" alt="Bumbu Pilihan" class="gallery-img w-full h-40 md:h-56 object-cover transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Bumbu Pilihan</div></div>
-        </div>
-        <div class="reveal reveal-delay-2 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
-          <img src="https://picsum.photos/seed/minuman-segar/400/400" alt="Minuman Segar" class="gallery-img w-full h-40 md:h-56 object-cover transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Minuman Segar</div></div>
-        </div>
+        <div class="reveal gallery-item col-span-2 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer"><img src="https://picsum.photos/seed/bakso-bowl-steam/800/800" alt="Bakso Kuah Hangat" class="gallery-img w-full h-64 md:h-full object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500"><div class="font-serif text-lg font-semibold">Bakso Kuah Hangat</div></div></div>
+        <div class="reveal reveal-delay-1 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer"><img src="https://picsum.photos/seed/mie-ayam-plate/400/400" alt="Mie Ayam Spesial" class="gallery-img w-full h-36 md:h-48 object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Mie Ayam Spesial</div></div></div>
+        <div class="reveal reveal-delay-2 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer"><img src="https://picsum.photos/seed/pangsit-piring/400/400" alt="Pangsit Goreng" class="gallery-img w-full h-36 md:h-48 object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Pangsit Goreng</div></div></div>
+        <div class="reveal reveal-delay-3 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer"><img src="https://picsum.photos/seed/dapur-masak/400/400" alt="Proses Memasak" class="gallery-img w-full h-36 md:h-48 object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Proses Memasak</div></div></div>
+        <div class="reveal reveal-delay-4 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer"><img src="https://picsum.photos/seed/warung-interior/400/400" alt="Suasana Warung" class="gallery-img w-full h-36 md:h-48 object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Suasana Warung</div></div></div>
+        <div class="reveal gallery-item col-span-2 rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer"><img src="https://picsum.photos/seed/makan-bersama/800/400" alt="Makan Bersama" class="gallery-img w-full h-40 md:h-56 object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-lg font-semibold">Makan Bersama Keluarga</div></div></div>
+        <div class="reveal reveal-delay-1 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer"><img src="https://picsum.photos/seed/bumbu-dapur/400/400" alt="Bumbu Pilihan" class="gallery-img w-full h-40 md:h-56 object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Bumbu Pilihan</div></div></div>
+        <div class="reveal reveal-delay-2 gallery-item rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer"><img src="https://picsum.photos/seed/minuman-segar/400/400" alt="Minuman Segar" class="gallery-img w-full h-40 md:h-56 object-cover transition-transform duration-700"><div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div><div class="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-500"><div class="font-serif text-sm font-semibold">Minuman Segar</div></div></div>
       </div>
     </div>
   </section>
@@ -592,14 +436,23 @@
         </div>
         <div class="reveal reveal-delay-2">
           <div class="rounded-3xl overflow-hidden shadow-xl border border-stone-200 h-80 lg:h-full min-h-[400px]">
-            <iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1445.0840436502817!2d110.21073111576901!3d-7.602939683805368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cf4a938afb9%3A0xb3a9718d618c5840!2sMie%20Ayam%20Bakso%20Pak%20Basiyo%20Gunung%20Kidul!5e0!3m2!1sid!2sid!4v1768715496181!5m2!1sid!2sid" width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- ===== GOOGLE MAPS ASLI — LOKASI PAK BASIYO ===== -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1445.0840436502817!2d110.21073111576901!3d-7.602939683805368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cf4a938afb9%3A0xb3a9718d618c5840!2sMie%20Ayam%20Bakso%20Pak%20Basiyo%20Gunung%20Kidul!5e0!3m2!1sid!2sid!4v1768715496181!5m2!1sid!2sid"
+              width="100%"
+              height="100%"
+              style="border:0; min-height: 400px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== TAMBAHAN: STATISTIK PENGUNJUNG ===== -->
+  <!-- ===== STATISTIK PENGUNJUNG ===== -->
   <section class="py-16 md:py-20 bg-warm-50 border-y border-brand-100/50">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <div class="text-center mb-10">
@@ -610,35 +463,23 @@
         <h2 class="reveal reveal-delay-1 font-serif text-2xl md:text-3xl font-bold text-stone-900">Pengunjung Kami</h2>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        <!-- Total Pengunjung -->
         <div class="reveal text-center p-5 md:p-8 bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all duration-300">
-          <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <span class="iconify text-brand-500" data-icon="mdi:account-group" data-width="28"></span>
-          </div>
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4"><span class="iconify text-brand-500" data-icon="mdi:account-group" data-width="28"></span></div>
           <div id="statTotal" class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-1">-</div>
           <div class="text-stone-500 text-sm">Total Pengunjung</div>
         </div>
-        <!-- Pengunjung Hari Ini -->
         <div class="reveal reveal-delay-1 text-center p-5 md:p-8 bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md hover:border-green-200 transition-all duration-300">
-          <div class="w-12 h-12 md:w-14 md:h-14 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <span class="iconify text-green-600" data-icon="mdi:calendar-today" data-width="28"></span>
-          </div>
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4"><span class="iconify text-green-600" data-icon="mdi:calendar-today" data-width="28"></span></div>
           <div id="statToday" class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-1">-</div>
           <div class="text-stone-500 text-sm">Hari Ini</div>
         </div>
-        <!-- Online Sekarang -->
         <div class="reveal reveal-delay-2 text-center p-5 md:p-8 bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300">
-          <div class="w-12 h-12 md:w-14 md:h-14 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <span class="iconify text-amber-600" data-icon="mdi:access-point" data-width="28"></span>
-          </div>
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4"><span class="iconify text-amber-600" data-icon="mdi:access-point" data-width="28"></span></div>
           <div id="statOnline" class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-1">-</div>
           <div class="text-stone-500 text-sm">Online Sekarang</div>
         </div>
-        <!-- Total Kunjungan -->
         <div class="reveal reveal-delay-3 text-center p-5 md:p-8 bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
-          <div class="w-12 h-12 md:w-14 md:h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <span class="iconify text-blue-600" data-icon="mdi:eye" data-width="28"></span>
-          </div>
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4"><span class="iconify text-blue-600" data-icon="mdi:eye" data-width="28"></span></div>
           <div id="statViews" class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-1">-</div>
           <div class="text-stone-500 text-sm">Total Kunjungan</div>
         </div>
@@ -766,13 +607,11 @@
     const KEY_TOTAL = 'total-visitors';
     const KEY_VIEWS = 'total-pageviews';
 
-    // Format angka ribuan
     function formatNum(n) {
       if (n === null || n === undefined || isNaN(n)) return '-';
       return n.toLocaleString('id-ID');
     }
 
-    // Animasi counter naik dari 0
     function animateCounter(el, target) {
       if (!el || target === null || isNaN(target)) { if (el) el.textContent = '-'; return; }
       const duration = 1500;
@@ -787,7 +626,6 @@
       requestAnimationFrame(update);
     }
 
-    // Counter API — increment
     async function counterUp(key) {
       try {
         const res = await fetch(`https://api.counterapi.dev/v1/${COUNTER_NS}/${key}/up`, { signal: AbortSignal.timeout(5000) });
@@ -796,7 +634,6 @@
       } catch { return null; }
     }
 
-    // Counter API — get tanpa increment
     async function counterGet(key) {
       try {
         const res = await fetch(`https://api.counterapi.dev/v1/${COUNTER_NS}/${key}`, { signal: AbortSignal.timeout(5000) });
@@ -805,11 +642,9 @@
       } catch { return null; }
     }
 
-    // localStorage helpers
     function getLocal(k) { return parseInt(localStorage.getItem(k) || '0', 10); }
     function setLocal(k, v) { localStorage.setItem(k, v.toString()); }
 
-    // Cek pengunjung unik hari ini
     function isUniqueToday() {
       const today = new Date().toISOString().slice(0, 10);
       const last = localStorage.getItem('basiyo_last_visit');
@@ -817,7 +652,6 @@
       return false;
     }
 
-    // Track pengunjung hari ini (per browser)
     function trackToday() {
       const today = new Date().toISOString().slice(0, 10);
       const storedDate = localStorage.getItem('basiyo_today_date');
@@ -836,7 +670,6 @@
       return count;
     }
 
-    // Estimasi online berdasarkan jam
     function estimateOnline() {
       const h = new Date().getHours();
       const m = new Date().getMinutes();
@@ -847,7 +680,6 @@
       return base + (m % 5) + 1;
     }
 
-    // Inisialisasi semua statistik
     async function initStats() {
       const elTotal = document.getElementById('statTotal');
       const elToday = document.getElementById('statToday');
@@ -855,14 +687,11 @@
       const elViews = document.getElementById('statViews');
       const elHero = document.getElementById('heroOnlineCount');
 
-      // Hari ini
       const todayCount = trackToday();
       animateCounter(elToday, todayCount);
 
-      // Apakah pengunjung unik?
       const isUnique = isUniqueToday();
 
-      // Total pengunjung
       let totalVisitors = isUnique ? await counterUp(KEY_TOTAL) : await counterGet(KEY_TOTAL);
       if (totalVisitors === null) {
         let local = getLocal('basiyo_total_visitors');
@@ -872,7 +701,6 @@
         setLocal('basiyo_total_visitors', totalVisitors);
       }
 
-      // Total kunjungan (selalu increment setiap load)
       let totalViews = await counterUp(KEY_VIEWS);
       if (totalViews === null) {
         let local = getLocal('basiyo_total_pageviews');
@@ -883,16 +711,13 @@
         setLocal('basiyo_total_pageviews', totalViews);
       }
 
-      // Render
       animateCounter(elTotal, totalVisitors || 0);
       animateCounter(elViews, totalViews);
 
-      // Online
       const online = estimateOnline();
       animateCounter(elOnline, online);
       if (elHero) elHero.textContent = online;
 
-      // Update online tiap 30 detik
       setInterval(() => {
         const o = estimateOnline();
         elOnline.textContent = formatNum(o);
@@ -900,7 +725,6 @@
       }, 30000);
     }
 
-    // Jalankan
     initStats();
   </script>
 </body>
