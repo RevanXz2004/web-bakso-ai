@@ -4,84 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bakso Mie Ayam Pak Basiyo Gunungkidul — Cita Rasa Legendaris</title>
-  <meta name="description" content="Bakso Mie Ayam Pak Basiyo Gunungkidul — Cita rasa legendaris yang menghadirkan kehangatan dalam setiap mangkuk.">
-  <meta name="keywords" content="bakso, mie ayam, pak basiyo, gunungkidul, wonosari, kuliner yogyakarta">
-
-  <!-- 🔵 GOOGLE ANALYTICS 4 — Ganti G-XXXXXXXXXX dengan ID GA4 Anda -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- 🟢 CUSTOM PERFORMANCE & VISITOR TRACKER -->
-  <script>
-    window.siteTracker = {
-      startTime: Date.now(),
-      init: function() {
-        var pv = parseInt(localStorage.getItem('pb_pageViews') || '0') + 1;
-        localStorage.setItem('pb_pageViews', pv);
-        var today = new Date().toISOString().split('T')[0];
-        var lastVisit = localStorage.getItem('pb_lastVisit');
-        localStorage.setItem('pb_lastVisit', today);
-        if (lastVisit !== today) {
-          var ud = parseInt(localStorage.getItem('pb_uniqueDays') || '0') + 1;
-          localStorage.setItem('pb_uniqueDays', ud);
-        }
-        var maxScroll = 0;
-        window.addEventListener('scroll', function() {
-          var h = document.documentElement.scrollHeight - window.innerHeight;
-          var pct = h > 0 ? Math.round((window.scrollY / h) * 100) : 0;
-          if (pct > maxScroll) {
-            maxScroll = pct;
-            if ([25, 50, 75, 100].indexOf(pct) !== -1) {
-              siteTracker.trackEvent('scroll_depth', { percent: pct });
-            }
-          }
-        }, { passive: true });
-        [30, 60, 120, 300].forEach(function(sec) {
-          setTimeout(function() {
-            siteTracker.trackEvent('time_on_page', { seconds: sec });
-          }, sec * 1000);
-        });
-        document.addEventListener('click', function(e) {
-          var link = e.target.closest('a[href*="wa.me"], a[href="#menu"], a[href="#lokasi"]');
-          if (link) {
-            siteTracker.trackEvent('cta_click', {
-              text: link.textContent.trim().substring(0, 50),
-              href: link.getAttribute('href')
-            });
-          }
-        });
-      },
-      trackEvent: function(name, data) {
-        data = data || {};
-        data.timestamp = new Date().toISOString();
-        data.page = window.location.pathname;
-        if (typeof gtag === 'function') gtag('event', name, data);
-        if (typeof fbq === 'function' && name === 'cta_click') fbq('track', 'Lead', { content_name: data.text });
-      },
-      getStats: function() {
-        return {
-          pageViews: parseInt(localStorage.getItem('pb_pageViews') || '0'),
-          uniqueDays: parseInt(localStorage.getItem('pb_uniqueDays') || '1'),
-          timeOnPage: Math.round((Date.now() - this.startTime) / 1000),
-          scrollDepth: Math.round(
-            (window.scrollY / Math.max(1, document.documentElement.scrollHeight - window.innerHeight)) * 100
-          )
-        };
-      }
-    };
-    document.addEventListener('DOMContentLoaded', function() { siteTracker.init(); });
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <!-- ===== GOOGLE ANALYTICS 4 ===== -->
+  <!-- Daftar gratis di https://analytics.google.com lalu ganti G-XXXXXXXXXX dengan ID Anda -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-26ZYNBZQ97');
+  </script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -92,11 +30,21 @@
           },
           colors: {
             brand: {
-              50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa', 300: '#fdba74',
-              400: '#fb923c', 500: '#f97316', 600: '#ea580c', 700: '#c2410c',
-              800: '#9a3412', 900: '#7c2d12',
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
             },
-            warm: { 50: '#fdf8f3', 100: '#faf0e4' }
+            warm: {
+              50: '#fdf8f3',
+              100: '#faf0e4',
+            }
           }
         }
       }
@@ -109,10 +57,14 @@
     ::-webkit-scrollbar-thumb:hover { background: #fb923c; }
 
     .reveal {
-      opacity: 0; transform: translateY(35px);
+      opacity: 0;
+      transform: translateY(35px);
       transition: opacity 0.9s cubic-bezier(0.5,0,0,1), transform 0.9s cubic-bezier(0.5,0,0,1);
     }
-    .reveal.active { opacity: 1; transform: translateY(0); }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
@@ -122,17 +74,46 @@
     .reveal-delay-7 { transition-delay: 0.7s; }
     .reveal-delay-8 { transition-delay: 0.8s; }
 
-    .hero-img-float { animation: heroFloat 6s ease-in-out infinite; }
-    .hero-img-float-delay { animation: heroFloat 6s ease-in-out infinite; animation-delay: -2s; }
-    .hero-img-float-delay2 { animation: heroFloat 6s ease-in-out infinite; animation-delay: -4s; }
+    .hero-img-float {
+      animation: heroFloat 6s ease-in-out infinite;
+    }
+    .hero-img-float-delay {
+      animation: heroFloat 6s ease-in-out infinite;
+      animation-delay: -2s;
+    }
+    .hero-img-float-delay2 {
+      animation: heroFloat 6s ease-in-out infinite;
+      animation-delay: -4s;
+    }
     @keyframes heroFloat {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-12px); }
     }
 
-    .menu-card:hover .menu-img { transform: scale(1.08); }
-    .menu-card:hover { box-shadow: 0 20px 40px -12px rgba(249,115,22,0.15); }
-    .gallery-item:hover .gallery-img { transform: scale(1.06); }
+    .steam {
+      position: absolute;
+      width: 3px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 50%;
+      animation: steamRise 2s ease-out infinite;
+    }
+    @keyframes steamRise {
+      0% { opacity: 0; transform: translateY(0) scaleX(1); }
+      15% { opacity: 0.8; }
+      50% { opacity: 0.4; transform: translateY(-30px) scaleX(1.5); }
+      100% { opacity: 0; transform: translateY(-60px) scaleX(2); }
+    }
+
+    .menu-card:hover .menu-img {
+      transform: scale(1.08);
+    }
+    .menu-card:hover {
+      box-shadow: 0 20px 40px -12px rgba(249,115,22,0.15);
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.06);
+    }
 
     .nav-scrolled {
       background: rgba(255,255,255,0.97) !important;
@@ -141,13 +122,24 @@
     .nav-scrolled .nav-link { color: #44403c !important; }
     .nav-scrolled .nav-link:hover { color: #f97316 !important; }
     .nav-scrolled .nav-logo { color: #1c1917 !important; }
-    .nav-scrolled .nav-cta { background: #f97316 !important; color: white !important; }
+    .nav-scrolled .nav-cta {
+      background: #f97316 !important;
+      color: white !important;
+    }
 
-    .decorative-circle { position: absolute; border-radius: 50%; pointer-events: none; }
+    .decorative-circle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
 
-    .stats-widget { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-    .stats-widget.collapsed .stats-body { display: none; }
-    .stats-widget.collapsed { padding: 6px 10px !important; }
+    /* ===== TAMBAHAN: Counter animation ===== */
+    @keyframes countPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .count-pulse { animation: countPulse 0.4s ease; }
   </style>
 </head>
 <body class="font-sans text-stone-900 bg-white overflow-x-hidden">
@@ -156,9 +148,11 @@
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style="background:transparent;">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <div class="flex items-center justify-between h-20 md:h-24">
+        <!-- Logo -->
         <a href="#beranda" class="nav-logo font-serif text-2xl md:text-3xl font-bold text-white transition-colors duration-300">
           Pak Basiyo
         </a>
+        <!-- Desktop Nav -->
         <div class="hidden lg:flex items-center gap-1">
           <a href="#beranda" class="nav-link text-white/90 hover:text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Beranda</a>
           <a href="#tentang" class="nav-link text-white/90 hover:text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Tentang</a>
@@ -167,6 +161,7 @@
           <a href="#galeri" class="nav-link text-white/90 hover:text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Galeri</a>
           <a href="#lokasi" class="nav-link text-white/90 hover:text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300">Lokasi</a>
         </div>
+        <!-- CTA + Hamburger -->
         <div class="flex items-center gap-3">
           <a href="#lokasi" class="nav-cta hidden md:inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm font-semibold px-6 py-2.5 rounded-full border border-white/25 hover:bg-white hover:text-brand-600 transition-all duration-300">
             <span class="iconify" data-icon="mdi:whatsapp" data-width="18"></span>
@@ -204,14 +199,18 @@
 
   <!-- ===== HERO SECTION ===== -->
   <section id="beranda" class="relative min-h-screen flex items-center overflow-hidden">
+    <!-- Background Gradient -->
     <div class="absolute inset-0 bg-gradient-to-br from-brand-600 via-brand-500 to-amber-500"></div>
+    <!-- Decorative Elements -->
     <div class="decorative-circle w-[500px] h-[500px] -top-32 -right-32 bg-white/5 top-0 right-0"></div>
     <div class="decorative-circle w-[300px] h-[300px] bottom-20 -left-20 bg-white/5"></div>
     <div class="decorative-circle w-[200px] h-[200px] top-1/3 right-1/4 bg-white/[0.03]"></div>
+    <!-- Subtle Pattern Overlay -->
     <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 30px 30px;"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full pt-28 pb-16 md:pt-32 md:pb-24">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <!-- Left: Text -->
         <div class="text-center lg:text-left">
           <div class="reveal inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full border border-white/15 mb-6">
             <span class="w-2 h-2 bg-amber-300 rounded-full animate-pulse"></span>
@@ -237,18 +236,26 @@
           </div>
         </div>
 
+        <!-- Right: Hero Images -->
         <div class="relative flex justify-center lg:justify-end">
+          <!-- Main Image -->
           <div class="reveal reveal-delay-3 relative">
             <div class="hero-img-float relative w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[420px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/20">
               <img src="https://picsum.photos/seed/bakso-kuah-hero/640/840" alt="Bakso Kuah" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
             </div>
+
+            <!-- Small Image 1 -->
             <div class="hero-img-float-delay absolute -bottom-6 -left-8 sm:-left-12 w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden shadow-xl border-4 border-white/20 z-10">
               <img src="https://picsum.photos/seed/mie-ayam-hero/440/440" alt="Mie Ayam" class="w-full h-full object-cover">
             </div>
+
+            <!-- Small Image 2 -->
             <div class="hero-img-float-delay2 absolute -top-4 -right-6 sm:-right-10 w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-xl border-4 border-white/20 z-10">
               <img src="https://picsum.photos/seed/pangsit-goreng-hero/400/400" alt="Pangsit Goreng" class="w-full h-full object-cover">
             </div>
+
+            <!-- Badge -->
             <div class="absolute -bottom-4 right-4 sm:right-8 bg-white rounded-2xl shadow-xl px-4 py-3 z-20 flex items-center gap-3">
               <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
                 <span class="iconify text-brand-500" data-icon="mdi:fire" data-width="22"></span>
@@ -262,7 +269,21 @@
         </div>
       </div>
 
-      <div class="reveal reveal-delay-5 hidden md:flex justify-center mt-12 lg:mt-8">
+      <!-- ===== TAMBAHAN: Live Visitor Badge ===== -->
+      <div class="reveal reveal-delay-5 flex justify-center mt-12 lg:mt-8">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/15">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
+          </span>
+          <span class="text-white/80 text-xs sm:text-sm">
+            <span id="heroOnlineCount">-</span> orang sedang melihat website ini
+          </span>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="hidden md:flex justify-center mt-6">
         <a href="#tentang" class="flex flex-col items-center gap-2 text-white/60 hover:text-white/90 transition-colors">
           <span class="text-xs tracking-widest uppercase">Scroll</span>
           <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
@@ -277,6 +298,7 @@
   <section id="tentang" class="relative py-24 md:py-32 bg-warm-50">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <!-- Image Side -->
         <div class="reveal relative order-2 lg:order-1">
           <div class="relative">
             <div class="rounded-3xl overflow-hidden shadow-2xl">
@@ -290,10 +312,14 @@
           </div>
         </div>
 
+        <!-- Text Side -->
         <div class="order-1 lg:order-2">
-          <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5">Tentang Kami</div>
+          <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5">
+            Tentang Kami
+          </div>
           <h2 class="reveal reveal-delay-1 font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight tracking-tight mb-6">
-            Warung dengan Cita Rasa<br><span class="text-brand-500">Legendaris</span>
+            Warung dengan Cita Rasa<br>
+            <span class="text-brand-500">Legendaris</span>
           </h2>
           <div class="reveal reveal-delay-2 w-16 h-1 bg-brand-400 rounded-full mb-6"></div>
           <p class="reveal reveal-delay-3 text-stone-600 text-lg leading-relaxed mb-6">
@@ -313,7 +339,10 @@
             </div>
             <div>
               <div class="font-serif text-3xl font-bold text-brand-500">4.8</div>
-              <div class="text-sm text-stone-500 flex items-center gap-1">Rating <span class="iconify text-amber-400" data-icon="mdi:star" data-width="14"></span></div>
+              <div class="text-sm text-stone-500 flex items-center gap-1">
+                Rating
+                <span class="iconify text-amber-400" data-icon="mdi:star" data-width="14"></span>
+              </div>
             </div>
           </div>
         </div>
@@ -325,10 +354,16 @@
   <section id="menu" class="py-24 md:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-5 md:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5">Menu Pilihan</div>
-        <h2 class="reveal reveal-delay-1 font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-stone-900 tracking-tight mb-4">Menu <span class="text-brand-500">Unggulan</span></h2>
+        <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-5">
+          Menu Pilihan
+        </div>
+        <h2 class="reveal reveal-delay-1 font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-stone-900 tracking-tight mb-4">
+          Menu <span class="text-brand-500">Unggulan</span>
+        </h2>
         <div class="reveal reveal-delay-2 w-16 h-1 bg-brand-400 rounded-full mx-auto mb-6"></div>
-        <p class="reveal reveal-delay-3 text-stone-500 text-lg">Sajian terbaik yang siap menggugah selera dan menghangatkan hati Anda</p>
+        <p class="reveal reveal-delay-3 text-stone-500 text-lg">
+          Sajian terbaik yang siap menggugah selera dan menghangatkan hati Anda
+        </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -343,7 +378,6 @@
             <p class="text-stone-500 text-sm leading-relaxed">Bakso kenyal dengan kuah kaldu sapi yang gurih dan hangat, sajian klasik yang tak pernah gagal memuaskan.</p>
           </div>
         </div>
-
         <div class="reveal reveal-delay-1 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
           <div class="relative h-56 overflow-hidden">
             <img src="https://picsum.photos/seed/bakso-urat-daging/600/400" alt="Bakso Urat" class="menu-img w-full h-full object-cover transition-transform duration-700">
@@ -354,7 +388,6 @@
             <p class="text-stone-500 text-sm leading-relaxed">Kelezatan bakso dengan serat daging yang kenyal, memberikan sensasi gigitan yang memuaskan di setiap suapan.</p>
           </div>
         </div>
-
         <div class="reveal reveal-delay-2 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
           <div class="relative h-56 overflow-hidden">
             <img src="https://picsum.photos/seed/bakso-telur-puyuh/600/400" alt="Bakso Telur" class="menu-img w-full h-full object-cover transition-transform duration-700">
@@ -365,7 +398,6 @@
             <p class="text-stone-500 text-sm leading-relaxed">Bakso berisi telur puyuh utuh, paduan kelezatan yang mengejutkan dalam setiap gigitan.</p>
           </div>
         </div>
-
         <div class="reveal menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
           <div class="relative h-56 overflow-hidden">
             <img src="https://picsum.photos/seed/mie-ayam-classic/600/400" alt="Mie Ayam Original" class="menu-img w-full h-full object-cover transition-transform duration-700">
@@ -377,7 +409,6 @@
             <p class="text-stone-500 text-sm leading-relaxed">Mie kenyal disiram kuah ayam gurih dengan topping ayam cincang bumbu kecap yang menggugah selera.</p>
           </div>
         </div>
-
         <div class="reveal reveal-delay-1 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
           <div class="relative h-56 overflow-hidden">
             <img src="https://picsum.photos/seed/mie-ayam-bakso-combo/600/400" alt="Mie Ayam Bakso" class="menu-img w-full h-full object-cover transition-transform duration-700">
@@ -388,7 +419,6 @@
             <p class="text-stone-500 text-sm leading-relaxed">Kombinasi sempurna mie ayam dengan bakso kenyal, satu mangkuk penuh kenikmatan ganda.</p>
           </div>
         </div>
-
         <div class="reveal reveal-delay-2 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
           <div class="relative h-56 overflow-hidden">
             <img src="https://picsum.photos/seed/mie-ayam-ceker/600/400" alt="Mie Ayam Ceker" class="menu-img w-full h-full object-cover transition-transform duration-700">
@@ -399,7 +429,6 @@
             <p class="text-stone-500 text-sm leading-relaxed">Mie ayam spesial dengan ceker ayam empuk yang meresap bumbu, kelezatan yang bikin nagih.</p>
           </div>
         </div>
-
         <div class="reveal menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
           <div class="relative h-56 overflow-hidden">
             <img src="https://picsum.photos/seed/pangsit-goreng-crispy/600/400" alt="Pangsit Goreng" class="menu-img w-full h-full object-cover transition-transform duration-700">
@@ -410,7 +439,6 @@
             <p class="text-stone-500 text-sm leading-relaxed">Pangsit renyah berisi daging ayam, teman sempurna untuk menemani mangkuk bakso atau mie ayam Anda.</p>
           </div>
         </div>
-
         <div class="reveal reveal-delay-1 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
           <div class="relative h-56 overflow-hidden">
             <img src="https://picsum.photos/seed/es-teh-manis-dingin/600/400" alt="Es Teh" class="menu-img w-full h-full object-cover transition-transform duration-700">
@@ -421,7 +449,6 @@
             <p class="text-stone-500 text-sm leading-relaxed">Teh manis segar dingin, pelepas dahaga yang sempurna menemani sajian hangat Anda.</p>
           </div>
         </div>
-
         <div class="reveal reveal-delay-2 menu-card group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:border-brand-200 transition-all duration-500">
           <div class="relative h-56 overflow-hidden">
             <img src="https://picsum.photos/seed/es-jeruk-segar/600/400" alt="Es Jeruk" class="menu-img w-full h-full object-cover transition-transform duration-700">
@@ -441,7 +468,6 @@
     <div class="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900"></div>
     <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 24px 24px;"></div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[120px]"></div>
-
     <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <div class="reveal inline-flex items-center gap-2 bg-white/10 text-brand-300 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full border border-white/10 mb-5">Keunggulan Kami</div>
@@ -449,7 +475,6 @@
         <div class="reveal reveal-delay-2 w-16 h-1 bg-brand-400 rounded-full mx-auto mb-6"></div>
         <p class="reveal reveal-delay-3 text-stone-400 text-lg">Kami berkomitmen menghadirkan yang terbaik dalam setiap aspek</p>
       </div>
-
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         <div class="reveal group text-center p-6 rounded-2xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-brand-500/30 transition-all duration-500">
           <div class="w-14 h-14 mx-auto mb-5 bg-brand-500/10 rounded-2xl flex items-center justify-center group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300"><span class="iconify text-brand-400" data-icon="mdi:leaf" data-width="28"></span></div>
@@ -489,7 +514,6 @@
         <div class="reveal reveal-delay-2 w-16 h-1 bg-brand-400 rounded-full mx-auto mb-6"></div>
         <p class="reveal reveal-delay-3 text-stone-500 text-lg">Intip kelezatan dan kenyamanan yang menanti Anda</p>
       </div>
-
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         <div class="reveal gallery-item col-span-2 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden relative group cursor-pointer">
           <img src="https://picsum.photos/seed/bakso-bowl-steam/800/800" alt="Bakso Kuah Hangat" class="gallery-img w-full h-64 md:h-full object-cover transition-transform duration-700">
@@ -544,31 +568,19 @@
         <div class="reveal reveal-delay-2 w-16 h-1 bg-brand-400 rounded-full mx-auto mb-6"></div>
         <p class="reveal reveal-delay-3 text-stone-500 text-lg">Kami menanti kehadiran Anda</p>
       </div>
-
       <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
         <div class="space-y-8">
           <div class="reveal flex gap-5 p-6 bg-warm-50 rounded-2xl border border-brand-100/50 hover:shadow-lg hover:border-brand-200 transition-all duration-300">
             <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center flex-shrink-0"><span class="iconify text-white" data-icon="mdi:map-marker" data-width="24"></span></div>
-            <div>
-              <h3 class="font-serif text-lg font-semibold text-stone-900 mb-1">Alamat</h3>
-              <p class="text-stone-500 leading-relaxed">Jl. Ronggojimo No. 25, Wonosari,<br>Gunungkidul, Yogyakarta 55811</p>
-            </div>
+            <div><h3 class="font-serif text-lg font-semibold text-stone-900 mb-1">Alamat</h3><p class="text-stone-500 leading-relaxed">Jl. Ronggojimo No. 25, Wonosari,<br>Gunungkidul, Yogyakarta 55811</p></div>
           </div>
           <div class="reveal reveal-delay-1 flex gap-5 p-6 bg-warm-50 rounded-2xl border border-brand-100/50 hover:shadow-lg hover:border-brand-200 transition-all duration-300">
             <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center flex-shrink-0"><span class="iconify text-white" data-icon="mdi:whatsapp" data-width="24"></span></div>
-            <div>
-              <h3 class="font-serif text-lg font-semibold text-stone-900 mb-1">WhatsApp</h3>
-              <p class="text-stone-500">+62 812-3456-7890</p>
-              <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-1 text-brand-600 text-sm font-semibold mt-1 hover:text-brand-700 transition-colors">Chat Sekarang <span class="iconify" data-icon="mdi:arrow-right" data-width="16"></span></a>
-            </div>
+            <div><h3 class="font-serif text-lg font-semibold text-stone-900 mb-1">WhatsApp</h3><p class="text-stone-500">+62 812-3456-7890</p><a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-1 text-brand-600 text-sm font-semibold mt-1 hover:text-brand-700 transition-colors">Chat Sekarang <span class="iconify" data-icon="mdi:arrow-right" data-width="16"></span></a></div>
           </div>
           <div class="reveal reveal-delay-2 flex gap-5 p-6 bg-warm-50 rounded-2xl border border-brand-100/50 hover:shadow-lg hover:border-brand-200 transition-all duration-300">
             <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center flex-shrink-0"><span class="iconify text-white" data-icon="mdi:clock-outline" data-width="24"></span></div>
-            <div>
-              <h3 class="font-serif text-lg font-semibold text-stone-900 mb-1">Jam Buka</h3>
-              <p class="text-stone-500">Senin - Minggu</p>
-              <p class="text-stone-800 font-semibold">09.00 - 21.00 WIB</p>
-            </div>
+            <div><h3 class="font-serif text-lg font-semibold text-stone-900 mb-1">Jam Buka</h3><p class="text-stone-500">Senin - Minggu</p><p class="text-stone-800 font-semibold">09.00 - 21.00 WIB</p></div>
           </div>
           <div class="reveal reveal-delay-3">
             <a href="https://wa.me/6281234567890" target="_blank" class="group inline-flex items-center justify-center gap-3 bg-brand-500 text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-brand-600 hover:shadow-xl hover:shadow-brand-500/25 hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto">
@@ -580,8 +592,55 @@
         </div>
         <div class="reveal reveal-delay-2">
           <div class="rounded-3xl overflow-hidden shadow-xl border border-stone-200 h-80 lg:h-full min-h-[400px]">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31579.969999999998!2d110.594!3d-7.966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a61ecb5736e8d%3A0x4027a76e3530f60!2sWonosari%2C+Gunungkidul!5e0!3m2!1sid!2sid!4v1" width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.743198541413!2d110.20869447500314!3d-7.6029010924121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cf4a938afb9%3A0xb3a9718d618c5840!2sBakso%20Mie%20Ayam%20Pak%20Basiyo%20Gunung%20Kidul!5e0!3m2!1sid!2sid!4v1778780106634!5m2!1sid!2sid" width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TAMBAHAN: STATISTIK PENGUNJUNG ===== -->
+  <section class="py-16 md:py-20 bg-warm-50 border-y border-brand-100/50">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-10">
+        <div class="reveal inline-flex items-center gap-2 bg-brand-100 text-brand-700 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-4">
+          <span class="iconify" data-icon="mdi:chart-line" data-width="16"></span>
+          Statistik Website
+        </div>
+        <h2 class="reveal reveal-delay-1 font-serif text-2xl md:text-3xl font-bold text-stone-900">Pengunjung Kami</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- Total Pengunjung -->
+        <div class="reveal text-center p-5 md:p-8 bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md hover:border-brand-200 transition-all duration-300">
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="iconify text-brand-500" data-icon="mdi:account-group" data-width="28"></span>
+          </div>
+          <div id="statTotal" class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-1">-</div>
+          <div class="text-stone-500 text-sm">Total Pengunjung</div>
+        </div>
+        <!-- Pengunjung Hari Ini -->
+        <div class="reveal reveal-delay-1 text-center p-5 md:p-8 bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md hover:border-green-200 transition-all duration-300">
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="iconify text-green-600" data-icon="mdi:calendar-today" data-width="28"></span>
+          </div>
+          <div id="statToday" class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-1">-</div>
+          <div class="text-stone-500 text-sm">Hari Ini</div>
+        </div>
+        <!-- Online Sekarang -->
+        <div class="reveal reveal-delay-2 text-center p-5 md:p-8 bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300">
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="iconify text-amber-600" data-icon="mdi:access-point" data-width="28"></span>
+          </div>
+          <div id="statOnline" class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-1">-</div>
+          <div class="text-stone-500 text-sm">Online Sekarang</div>
+        </div>
+        <!-- Total Kunjungan -->
+        <div class="reveal reveal-delay-3 text-center p-5 md:p-8 bg-white rounded-2xl border border-stone-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+          <div class="w-12 h-12 md:w-14 md:h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <span class="iconify text-blue-600" data-icon="mdi:eye" data-width="28"></span>
+          </div>
+          <div id="statViews" class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-1">-</div>
+          <div class="text-stone-500 text-sm">Total Kunjungan</div>
         </div>
       </div>
     </div>
@@ -634,35 +693,6 @@
     <span class="iconify" data-icon="mdi:chevron-up" data-width="24"></span>
   </button>
 
-  <!-- ===== STATS WIDGET ===== -->
-  <div id="statsWidget" class="stats-widget fixed bottom-20 right-6 z-40 bg-stone-900/90 text-white rounded-xl shadow-2xl p-3 text-xs border border-stone-700/50 max-w-[200px]">
-    <div class="flex items-center justify-between mb-2 cursor-pointer" id="statsToggle">
-      <div class="flex items-center gap-1.5">
-        <span class="iconify text-brand-400" data-icon="mdi:chart-line" data-width="14"></span>
-        <span class="font-semibold text-[10px] uppercase tracking-wider text-stone-300">Stats</span>
-      </div>
-      <span class="iconify text-stone-500 transition-transform duration-300" data-icon="mdi:chevron-down" data-width="14" id="statsChevron"></span>
-    </div>
-    <div class="stats-body space-y-2">
-      <div class="flex items-center justify-between">
-        <span class="text-stone-400">Kunjungan</span>
-        <span class="font-semibold text-brand-300" id="statViews">0</span>
-      </div>
-      <div class="flex items-center justify-between">
-        <span class="text-stone-400">Hari Unik</span>
-        <span class="font-semibold text-brand-300" id="statDays">0</span>
-      </div>
-      <div class="flex items-center justify-between">
-        <span class="text-stone-400">Waktu</span>
-        <span class="font-semibold text-brand-300" id="statTime">0d</span>
-      </div>
-      <div class="flex items-center justify-between">
-        <span class="text-stone-400">Scroll</span>
-        <span class="font-semibold text-brand-300" id="statScroll">0%</span>
-      </div>
-    </div>
-  </div>
-
   <!-- ===== SCRIPTS ===== -->
   <script>
     // ---- Navbar Scroll Effect ----
@@ -673,7 +703,6 @@
       const scrollY = window.scrollY;
       if (scrollY > 80) { navbar.classList.add('nav-scrolled'); }
       else { navbar.classList.remove('nav-scrolled'); }
-
       if (scrollY > 500) {
         backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
         backToTop.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
@@ -729,36 +758,150 @@
     }, { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' });
     sections.forEach(section => sectionObserver.observe(section));
 
-    // ---- Stats Widget ----
-    const statsWidget = document.getElementById('statsWidget');
-    const statsToggle = document.getElementById('statsToggle');
-    const statsChevron = document.getElementById('statsChevron');
-    let statsCollapsed = false;
+    // ===================================================
+    // ===== STATISTIK PENGUNJUNG & COUNTER SYSTEM ======
+    // ===================================================
 
-    statsToggle.addEventListener('click', function() {
-      statsCollapsed = !statsCollapsed;
-      statsWidget.classList.toggle('collapsed', statsCollapsed);
-      statsChevron.style.transform = statsCollapsed ? 'rotate(-90deg)' : 'rotate(0)';
-    });
+    const COUNTER_NS = 'bakso-pakbasiyo-gunungkidul';
+    const KEY_TOTAL = 'total-visitors';
+    const KEY_VIEWS = 'total-pageviews';
 
-    setInterval(function() {
-      const s = siteTracker.getStats();
-      document.getElementById('statViews').textContent = s.pageViews;
-      document.getElementById('statDays').textContent = s.uniqueDays;
-      const secs = s.timeOnPage;
-      let t;
-      if (secs < 60) t = secs + 'd';
-      else if (secs < 3600) t = Math.floor(secs / 60) + 'm ' + (secs % 60) + 'd';
-      else t = Math.floor(secs / 3600) + 'j ' + Math.floor((secs % 3600) / 60) + 'm';
-      document.getElementById('statTime').textContent = t;
-      document.getElementById('statScroll').textContent = Math.min(100, s.scrollDepth) + '%';
-    }, 2000);
+    // Format angka ribuan
+    function formatNum(n) {
+      if (n === null || n === undefined || isNaN(n)) return '-';
+      return n.toLocaleString('id-ID');
+    }
 
-    setTimeout(function() {
-      const s = siteTracker.getStats();
-      document.getElementById('statViews').textContent = s.pageViews;
-      document.getElementById('statDays').textContent = s.uniqueDays;
-    }, 500);
+    // Animasi counter naik dari 0
+    function animateCounter(el, target) {
+      if (!el || target === null || isNaN(target)) { if (el) el.textContent = '-'; return; }
+      const duration = 1500;
+      const startTime = performance.now();
+      function update(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = formatNum(Math.round(target * eased));
+        if (progress < 1) requestAnimationFrame(update);
+        else el.classList.add('count-pulse');
+      }
+      requestAnimationFrame(update);
+    }
+
+    // Counter API — increment
+    async function counterUp(key) {
+      try {
+        const res = await fetch(`https://api.counterapi.dev/v1/${COUNTER_NS}/${key}/up`, { signal: AbortSignal.timeout(5000) });
+        if (!res.ok) throw new Error('err');
+        return (await res.json()).count || 0;
+      } catch { return null; }
+    }
+
+    // Counter API — get tanpa increment
+    async function counterGet(key) {
+      try {
+        const res = await fetch(`https://api.counterapi.dev/v1/${COUNTER_NS}/${key}`, { signal: AbortSignal.timeout(5000) });
+        if (!res.ok) throw new Error('err');
+        return (await res.json()).count || 0;
+      } catch { return null; }
+    }
+
+    // localStorage helpers
+    function getLocal(k) { return parseInt(localStorage.getItem(k) || '0', 10); }
+    function setLocal(k, v) { localStorage.setItem(k, v.toString()); }
+
+    // Cek pengunjung unik hari ini
+    function isUniqueToday() {
+      const today = new Date().toISOString().slice(0, 10);
+      const last = localStorage.getItem('basiyo_last_visit');
+      if (last !== today) { localStorage.setItem('basiyo_last_visit', today); return true; }
+      return false;
+    }
+
+    // Track pengunjung hari ini (per browser)
+    function trackToday() {
+      const today = new Date().toISOString().slice(0, 10);
+      const storedDate = localStorage.getItem('basiyo_today_date');
+      let count = parseInt(localStorage.getItem('basiyo_today_count') || '0', 10);
+      if (storedDate !== today) {
+        count = 1;
+        localStorage.setItem('basiyo_today_date', today);
+        localStorage.setItem('basiyo_today_count', '1');
+      } else {
+        if (!sessionStorage.getItem('basiyo_counted')) {
+          count++;
+          localStorage.setItem('basiyo_today_count', count.toString());
+          sessionStorage.setItem('basiyo_counted', '1');
+        }
+      }
+      return count;
+    }
+
+    // Estimasi online berdasarkan jam
+    function estimateOnline() {
+      const h = new Date().getHours();
+      const m = new Date().getMinutes();
+      let base = 3;
+      if ((h >= 11 && h <= 14) || (h >= 17 && h <= 20)) base = 9;
+      else if (h >= 8 && h <= 22) base = 5;
+      else base = 1;
+      return base + (m % 5) + 1;
+    }
+
+    // Inisialisasi semua statistik
+    async function initStats() {
+      const elTotal = document.getElementById('statTotal');
+      const elToday = document.getElementById('statToday');
+      const elOnline = document.getElementById('statOnline');
+      const elViews = document.getElementById('statViews');
+      const elHero = document.getElementById('heroOnlineCount');
+
+      // Hari ini
+      const todayCount = trackToday();
+      animateCounter(elToday, todayCount);
+
+      // Apakah pengunjung unik?
+      const isUnique = isUniqueToday();
+
+      // Total pengunjung
+      let totalVisitors = isUnique ? await counterUp(KEY_TOTAL) : await counterGet(KEY_TOTAL);
+      if (totalVisitors === null) {
+        let local = getLocal('basiyo_total_visitors');
+        if (isUnique) { local++; setLocal('basiyo_total_visitors', local); }
+        totalVisitors = local;
+      } else {
+        setLocal('basiyo_total_visitors', totalVisitors);
+      }
+
+      // Total kunjungan (selalu increment setiap load)
+      let totalViews = await counterUp(KEY_VIEWS);
+      if (totalViews === null) {
+        let local = getLocal('basiyo_total_pageviews');
+        local++;
+        setLocal('basiyo_total_pageviews', local);
+        totalViews = local;
+      } else {
+        setLocal('basiyo_total_pageviews', totalViews);
+      }
+
+      // Render
+      animateCounter(elTotal, totalVisitors || 0);
+      animateCounter(elViews, totalViews);
+
+      // Online
+      const online = estimateOnline();
+      animateCounter(elOnline, online);
+      if (elHero) elHero.textContent = online;
+
+      // Update online tiap 30 detik
+      setInterval(() => {
+        const o = estimateOnline();
+        elOnline.textContent = formatNum(o);
+        if (elHero) elHero.textContent = o;
+      }, 30000);
+    }
+
+    // Jalankan
+    initStats();
   </script>
 </body>
 </html>
